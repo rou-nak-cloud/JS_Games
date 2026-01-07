@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman got Hanged</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+    <script type="module" src="script.js" defer></script>
+  <body>
+    <div class="gameModal">
+      <div class="content">
+        <img src="./assets/lost.gif" alt="gif" />
+        <h4>Game Over!</h4>
+        <p>The correct word was: <b>rainbow</b></p>
+        <button type="submit" class="playAgain">Play Again</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hangmanBox">
+        <img src="./assets/hangman-0.svg" alt="hangmanImg" />
+        <h1>Hangman Game</h1>
+      </div>
+      <div class="gameBox">
+        <ul class="wordDisplay"></ul>
+        <h4 class="hintText">
+          Hint:
+          <b></b>
+        </h4>
+        <h4 class="guessText">Incorrect guesses: <b>0 | 6</b></h4>
+        <div class="keyboard"></div>
+      </div>
+    </div>
+  </body>
+</html>

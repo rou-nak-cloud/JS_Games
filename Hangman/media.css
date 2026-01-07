@@ -1,0 +1,58 @@
+@media (max-width: 782px) {
+  body {
+    padding: 2vw;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 95vw;
+    gap: 6vw;
+    padding: 6vw 0vw;
+    border-radius: 3vw;
+  }
+
+  /* Hangman section */
+  .hangmanBox img {
+    max-width: 45vw;
+  }
+
+  .hangmanBox h1 {
+    font-size: 1.2rem;
+    margin-top: 3vw;
+  }
+
+  /* Word display */
+  .wordDisplay {
+    gap: 3vw;
+  }
+
+  .wordDisplay .letter {
+    width: 6vw;
+    font-size: 2rem;
+    margin-bottom: 4vw;
+    border-bottom: 2px solid #000;
+  }
+
+  .wordDisplay .letter.guessed {
+    margin: -2.5vw 0 2.5vw;
+  }
+
+  /* Game info text */
+  .gameBox h4 {
+    font-size: 1.1rem;
+    margin-bottom: 3vw;
+  }
+
+  /* Keyboard */
+  .gameBox .keyboard {
+    gap: 2vw;
+  }
+
+  .keyboard button {
+    width: calc(100% / 7 - 2vw); /* fewer keys per row */
+    padding: 1.5vw;
+    font-size: 0.9rem;
+    border-radius: 1vw;
+  }
+}
