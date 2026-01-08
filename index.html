@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/cc69542d82.js" crossorigin="anonymous" defer></script>
+<body>
+    <h2 class="firstText">Anaconda</h2>
+    <div class="wrapper">
+        <div class="gameDetails">
+            <span class="score">Score: 0</span>
+            <span class="highScore">High Score: 0</span>
+        </div>
+        <div class="playBoard"></div>
+    </div>
+    <div class="controls">
+        <i data-key="ArrowDown" class="fa-solid fa-arrow-down"></i>
+        <i data-key="ArrowLeft" class="fa-solid fa-arrow-left"></i>
+        <i data-key="ArrowUp" class="fa-solid fa-arrow-up"></i>
+        <i data-key="ArrowRight" class="fa-solid fa-arrow-right"></i>
+    </div>
+    <div class="gameOverModal">
+  <div class="modalContent">
+    <h2>Game Over 🐍</h2>
+    <p>Your Score: <span class="finalScore">0</span></p>
+    <button type="button" class="restartBtn">Play Again</button>
+  </div>
+</div>
+</body>
+</html>
