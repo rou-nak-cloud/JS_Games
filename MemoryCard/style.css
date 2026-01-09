@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6563ff;
+}
+.wrapper {
+  height: 400px;
+  width: 400px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.cards,
+.card,
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards.lock {
+  cursor: wait;
+  pointer-events: none;
+}
+.cards .card {
+  position: relative;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+.card.shake {
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-8px); /* Shake left */
+  }
+  40%,
+  80% {
+    transform: translateX(8px); /* Shake right */
+  }
+}
+
+.card .frontView span {
+  font-size: 40px;
+  color: #6563ff;
+}
+.card .backView {
+  /* display: none; */
+  transform: rotateY(180deg);
+  transition: transform 0.4s ease;
+}
+.card.flip .frontView {
+  transform: rotateY(-180deg);
+}
+.card.flip .backView {
+  transform: rotateY(0deg);
+}
+
+.cards .card .view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  transition: transform 0.4s linear;
+}
+.card .backView img {
+  max-width: 50px;
+}
