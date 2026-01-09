@@ -13,6 +13,17 @@
   </head>
   <body>
     <div class="wrapper">
+        <div class="game-info">
+    <div class="info">
+        Time: <span id="time">30</span>s
+    </div>
+    <div class="info">
+        Flips: <span id="flips">0</span>
+    </div>
+    <button type="button" id="refresh">Play Again</button>
+    </div>
+
+
       <ul class="cards">
         <li class="card">
           <div class="view frontView">
@@ -144,5 +155,14 @@
             </div>
       </li>
     </ul>
+    <!-- game modal -->
+     <div class="game-modal hidden">
+  <div class="modal-content">
+    <h2 class="modal-title">Game Over</h2>
+    <p class="modal-text">Your message here</p>
+    <button id="modal-btn">Play Again</button>
+  </div>
+</div>
+
   </body>
 </html>

@@ -18,8 +18,8 @@ body {
   background-color: #6563ff;
 }
 .wrapper {
-  height: 400px;
-  width: 400px;
+  /* height: 600px; */
+  width: 500px;
   background-color: #f8f8f8;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -33,10 +33,11 @@ body {
   justify-content: center;
 }
 .cards {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 10px;
 }
 .cards.lock {
   cursor: wait;
@@ -47,7 +48,8 @@ body {
   perspective: 800px;
   transform-style: preserve-3d;
   cursor: pointer;
-  height: calc(100% / 4 - 10px);
+  /* height: calc(100% / 4 - 10px); */
+  aspect-ratio: 1/1;
   width: calc(100% / 4 - 10px);
 }
 .card.shake {
@@ -95,8 +97,101 @@ body {
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   backface-visibility: hidden;
-  transition: transform 0.4s linear;
+  transition: transform 0.25s linear;
 }
 .card .backView img {
   max-width: 50px;
+}
+
+.game-info {
+  width: 100%;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-info .info {
+  font-weight: 600;
+  color: #333;
+}
+
+#refresh {
+  padding: 6px 14px;
+  border: 1px solid #6563ff;
+  background: transparent;
+  color: #6563ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#refresh:hover {
+  background: #6563ff;
+  color: #fff;
+}
+
+/* game modal */
+.game-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.game-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.modal-text {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#modal-btn {
+  padding: 8px 18px;
+  background: #6563ff;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#modal-btn:hover {
+  opacity: 0.9;
 }
