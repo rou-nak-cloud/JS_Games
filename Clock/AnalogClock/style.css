@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS lint */
+.pos-1 {
+  --i: 1;
+}
+.pos-2 {
+  --i: 2;
+}
+.pos-3 {
+  --i: 3;
+}
+.pos-4 {
+  --i: 4;
+}
+.pos-5 {
+  --i: 5;
+}
+.pos-6 {
+  --i: 6;
+}
+.pos-7 {
+  --i: 7;
+}
+.pos-8 {
+  --i: 8;
+}
+.pos-9 {
+  --i: 9;
+}
+.pos-10 {
+  --i: 10;
+}
+.pos-11 {
+  --i: 11;
+}
+.pos-12 {
+  --i: 12;
+}
+
+:root {
+  --primaryColor: #f6f7fb;
+  --whiteColor: #fff;
+  --blackColor: #18191a;
+  --redColor: #e74c3c;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primaryColor);
+}
+body.dark {
+  --primaryColor: #242526;
+  --whiteColor: #18191a;
+  --blackColor: #fff;
+  --redColor: #e74c3c;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2vw;
+  flex-direction: column;
+}
+.container .clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1), 0 25px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--whiteColor);
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.clock label {
+  position: absolute;
+  inset: 20px;
+  text-align: center;
+  transform: rotate(calc(var(--i) * (360deg / 12)));
+}
+.clock label span {
+  display: inline-block;
+  color: var(--blackColor);
+  font-size: 1.2vw;
+  transform: rotate(calc(var(--i) * (-360deg / 12)));
+}
+.container .indicator {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 10px;
+  width: 10px;
+}
+.indicator::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: var(--blackColor);
+  border: 4px solid var(--redColor);
+  z-index: 99;
+}
+.indicator .hand {
+  border-radius: 4px;
+}
+.indicator .second {
+  position: absolute;
+  height: 130px;
+  width: 4px;
+  bottom: 0;
+  transform-origin: bottom;
+  background-color: var(--redColor);
+}
+.indicator .minute {
+  height: 110px;
+  width: 5px;
+  background-color: var(--blackColor);
+  position: absolute;
+  bottom: 0;
+  transform-origin: bottom;
+  /* transform: rotate(45deg); */
+}
+
+.indicator .hour {
+  height: 90px;
+  width: 6px;
+  background-color: var(--blackColor);
+  position: absolute;
+  bottom: 0;
+  /* transform: rotate(60deg); */
+  transform-origin: bottom;
+}
+.modeSwitch {
+  display: inline-block;
+  padding: 1vw 2vw;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  font-size: 1.2vw;
+  font-weight: 400;
+  border-radius: 1vw;
+  cursor: pointer;
+}

@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f8ff;
+}
+section.dark {
+  background: #24292d;
+}
+section .container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  max-width: 550px;
+  width: 100%;
+  height: 250px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  position: relative;
+}
+section.dark .container {
+  background: #323840;
+}
+section .container .icons i {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  height: 30px;
+  width: 30px;
+  background-color: #24292d;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+section.dark .container .icons i {
+  background: #fff;
+  color: #323840;
+}
+section .container .icons i.fa-sun {
+  opacity: 0;
+  pointer-events: none;
+}
+section.dark .container .icons i.fa-sun {
+  opacity: 1;
+  pointer-events: auto;
+}
+section .container .time {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.container .time .timeColon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.time .timeColon .timeText {
+  height: 110px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0f8ff;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+section.dark .time .timeColon .timeText {
+  background-color: #24292d;
+}
+.time .timeColon .timeText,
+.time .timeColon .colon {
+  font-size: 35px;
+  font-weight: 400;
+}
+.time .timeColon .colon {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+section.dark .time .timeText .num,
+section.dark .time .colon {
+  color: #fff;
+}
+.time .timeColon .timeText .text {
+  font-size: 15px;
+  font-weight: 300;
+}
+section.dark .time .timeColon .text {
+  color: #fff;
+}
+.time .timeColon .colon {
+  font-size: 40px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+.time .timeColon .am_pm {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+section.dark .time .timeColon .am_pm {
+  color: #fff;
+}
