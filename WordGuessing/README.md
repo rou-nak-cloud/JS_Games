@@ -4,6 +4,12 @@ A fun and interactive **Memory Card Matching Game** built using **HTML, CSS, and
 Flip the cards, match identical pairs, and test your memory skills!
 
 ---
+## 🌐 Live Demo
+
+👉 **Play the game here:**  
+🔗 (https://js-games-word-guess-1.vercel.app/)
+
+---
 
 ## 🚀 Features (v1)
 
