@@ -5,6 +5,10 @@ Play as **X or O**, take turns, and try to get three in a row! Against the compu
 
 ---
 
+## Live Play
+
+[Tic Tac Toe Live](https://js-games-chi.vercel.app/)
+
 ## 🎮 Features
 
 - 🧠 Single-player gameplay (X vs O AI)
